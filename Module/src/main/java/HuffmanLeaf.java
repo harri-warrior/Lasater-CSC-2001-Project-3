@@ -17,4 +17,9 @@ public record HuffmanLeaf (int freq, char charASCII) implements HuffmanTree{
         // unimplemented ...
         return 0;
     }
+
+    @Override
+    public int charAscii() {
+        return 0;
+    }
 }

@@ -12,9 +12,22 @@
 public record HuffmanNode(int charAscii, int freq, HuffmanTree left, HuffmanTree right)
         implements HuffmanTree{
 
-     public boolean comesBefore(HuffmanTree other) {
-        // TODO: implement
-        return false;
+    public boolean comesBefore(HuffmanTree other) {
+        if (this.freq < other.freq()) {
+            return true;
+        }
+        if (this.freq > other.freq()) {
+            return false;
+        }
+        return this.charAscii < other.charAscii();
+    }
+
+    public int freq(){
+        return freq;
+    }
+
+    public int charAscii(){
+        return charAscii;
     }
 
     public HuffmanTree combine(HuffmanTree other) {

@@ -28,4 +28,7 @@ public interface HuffmanTree extends Comparable<HuffmanTree> {
     @Override
     public int compareTo(HuffmanTree other);
 
-    }
+    int freq();
+
+    int charAscii();
+}
